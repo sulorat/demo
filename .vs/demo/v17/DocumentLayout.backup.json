@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|c:\\users\\prdb\\source\\repos\\demo\\demo\\toadmin.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|solutionrelative:toadmin.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|c:\\users\\prdb\\source\\repos\\demo\\demo\\toadmin.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|solutionrelative:toadmin.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|c:\\users\\prdb\\source\\repos\\demo\\demo\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|solutionrelative:mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|c:\\users\\prdb\\source\\repos\\demo\\demo\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97DFBE3F-81FB-4261-9065-9E2766166B0C}|demo.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 191,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ToAdmin.axaml",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\ToAdmin.axaml",
+              "RelativeDocumentMoniker": "ToAdmin.axaml",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\ToAdmin.axaml",
+              "RelativeToolTip": "ToAdmin.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-13T12:38:05.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ToAdmin.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\ToAdmin.axaml.cs",
+              "RelativeDocumentMoniker": "ToAdmin.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\ToAdmin.axaml.cs*",
+              "RelativeToolTip": "ToAdmin.axaml.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T12:38:05.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "MainWindow.axaml",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\MainWindow.axaml*",
+              "RelativeToolTip": "MainWindow.axaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-13T11:24:39.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo\\demo\\MainWindow.axaml.cs*",
+              "RelativeToolTip": "MainWindow.axaml.cs*",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAYwHIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T11:24:26.444Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

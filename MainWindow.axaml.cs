@@ -13,6 +13,7 @@ using Avalonia.Media;
 using Npgsql.TypeMapping;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
+using Avalonia.Interactivity;
 
 namespace demo;
 
@@ -37,6 +38,8 @@ public class ServicePresenter() : Service
                 : $" {this.Cost:0} рублей за {this.Durationinseconds} минут"
             );
     }
+
+    public Bitmap ServiceImage { get => GetBitmap(this.Mainimagepath); }
 
     public string ServiceDiscount
     {
@@ -69,15 +72,24 @@ public class ServicePresenter() : Service
 public partial class MainWindow : Window
 {
     private string _searchWord = String.Empty;
+
+   
     private List<ServicePresenter> DisplayList { get; set; } = new List<ServicePresenter>();
     private List<ServicePresenter> SourceList { get; set; }
+
     
     private ObservableCollection<string> _sortValue = new ObservableCollection<string>()
         { "все", "по возрастанию", "по убыванию" };
 
+    private ObservableCollection<string> _filterValue = new ObservableCollection<string>()
+    {
+        "Все","0-5%","5-15%","15-30%","30-70%","70-100%"
+    };
+    
+    private int filterResult = 0;
+
     private int _sortResult = 0;
 
-    [SuppressMessage("ReSharper.DPA", "DPA0000: DPA issues")]
     public MainWindow()
     {
         InitializeComponent();
@@ -95,11 +107,15 @@ public partial class MainWindow : Window
                 }
             ).ToList();
         }
-        
+        FilterSalesComboBox.ItemsSource = _filterValue;
         SortComboBox.ItemsSource = _sortValue;
         DisplayService();
     }
 
+    public MainWindow(bool admidMode)
+    {
+
+    }
     private void DisplayService()
     {
         DisplayList = new List<ServicePresenter>(SourceList);
@@ -119,10 +135,44 @@ public partial class MainWindow : Window
                 DisplayList = DisplayList.OrderByDescending(x => x.Cost).ToList();
                 break;
         }
+        switch (filterResult)
+        {
+            case 0:
+                DisplayList = DisplayList;
+                    break;
+            case 1:
+                DisplayList = (DisplayList.Where(x => (x.Discount*100 >= 0 && x.Discount*100 < 5)).ToList());
+                break;
+            case 2:
+                DisplayList = (DisplayList.Where(x => (x.Discount*100 >= 5 && x.Discount*100 < 15)).ToList());
+                break;
+            case 3:
+                DisplayList = (DisplayList.Where(x => (x.Discount*100 >= 15 && x.Discount*100 < 30)).ToList());
+                break;
+            case 4:
+                DisplayList = (DisplayList.Where(x => (x.Discount*100 >= 30 && x.Discount*100 < 70)).ToList());
+                break;
+            case 5:
+                DisplayList = (DisplayList.Where(x => (x.Discount*100 >= 70 && x.Discount*100 < 100)).ToList());
+                break;
+            
+        }
         ServiceListBox.ItemsSource = DisplayList;
         StatisticTextBlock.Text = $"{DisplayList.Count} из {SourceList.Count}";
     }
 
+    private void FilteringComboBox_SelectionChanged(object? sender, SelectionChangedEventArgs e)
+    {
+        filterResult = (sender as ComboBox).SelectedIndex;
+        DisplayService();
+        
+    }
+    private void ToAdmin_Click(object sender, RoutedEventArgs e)
+    {
+        var adminPage = new ToAdmin();
+        adminPage.Show();
+        this.Close(); 
+    }
 
     private void SortComboBox_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
     {

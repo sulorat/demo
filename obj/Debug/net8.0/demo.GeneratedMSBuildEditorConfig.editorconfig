@@ -13,12 +13,15 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = demo
-build_property.ProjectDir = D:\RiderProjects\demo\
+build_property.ProjectDir = C:\Users\prdb\source\repos\demo\demo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/RiderProjects/demo/App.axaml]
+[C:/Users/prdb/source/repos/demo/demo/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/RiderProjects/demo/MainWindow.axaml]
+[C:/Users/prdb/source/repos/demo/demo/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/prdb/source/repos/demo/demo/ToAdmin.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

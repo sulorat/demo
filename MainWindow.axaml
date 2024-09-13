@@ -10,8 +10,9 @@
         <Border DockPanel.Dock="Top"  HorizontalAlignment="Center" BorderThickness="0,0,0,1">
             <StackPanel Orientation="Horizontal">
                 <TextBox Name="SerchingTextBox" TextChanging="SearchingTextbox" Width="250"> </TextBox>
-                <ComboBox Name="FilterSalesComboBox"/>
+                <ComboBox SelectionChanged="FilteringComboBox_SelectionChanged" Name="FilterSalesComboBox"/>
                 <ComboBox SelectionChanged="SortComboBox_OnSelectionChanged" Name="SortComboBox" ></ComboBox>
+				<Button Name="ChangeModeButton" Margin="300,0,0,0" Click="ToAdmin_Click" Background="Aqua">Смена режима </Button>
             </StackPanel>
         </Border>
         <Border DockPanel.Dock="Bottom" >
@@ -20,14 +21,14 @@
             </StackPanel>
         </Border>
         <Border DockPanel.Dock="Left">
-            <Image></Image>
+            <Image Name="MyImage" ></Image>
         </Border>
         <Border>
             <ListBox Name="ServiceListBox" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Image></Image>
+                            <Image> </Image>
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="{Binding ServiceName}"></TextBlock>
                                 <StackPanel Orientation="Horizontal">
@@ -35,9 +36,9 @@
                                     <TextBlock Text="{Binding ServiceRealCost }"></TextBlock>             
                                 </StackPanel>
                                 <TextBlock Text="{Binding ServiceDiscount}"></TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button></Button>
-                                    <Button></Button>
+                                <StackPanel Orientation="Horizontal" Margin="5" >
+                                    <Button>Редакатировать </Button>
+                                    <Button> Удалить</Button>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>

@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		Width="500" Height="200"
+        x:Class="demo.ToAdmin"
+		x:CompileBindings="False"
+		WindowStartupLocation="CenterScreen"
+        Title="ToAdmin">
+	<StackPanel Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+		<TextBlock >Введите код для перехода в режим администратора </TextBlock>
+		<TextBox Name="CodeTextBox" Width="150"></TextBox>
+		<StackPanel Spacing="10" HorizontalAlignment="Center" Orientation="Horizontal">
+		<Button Click="LoginAdminButton_Click" Name="LoginAdminButton" > Войти </Button>
+		</StackPanel>
+	</StackPanel>
+</Window>
