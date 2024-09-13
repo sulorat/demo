@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo.MainWindow"
+        x:CompileBindings="False"
+        Title="demo">
+    <DockPanel >
+        <Border DockPanel.Dock="Top"  HorizontalAlignment="Center" BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="SerchingTextBox" TextChanging="SearchingTextbox" Width="250"> </TextBox>
+                <ComboBox Name="FilterSalesComboBox"/>
+                <ComboBox SelectionChanged="SortComboBox_OnSelectionChanged" Name="SortComboBox" ></ComboBox>
+            </StackPanel>
+        </Border>
+        <Border DockPanel.Dock="Bottom" >
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Name="StatisticTextBlock" ></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border DockPanel.Dock="Left">
+            <Image></Image>
+        </Border>
+        <Border>
+            <ListBox Name="ServiceListBox" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image></Image>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{Binding ServiceName}"></TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding ServiceCost}"></TextBlock>
+                                    <TextBlock Text="{Binding ServiceRealCost }"></TextBlock>             
+                                </StackPanel>
+                                <TextBlock Text="{Binding ServiceDiscount}"></TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button></Button>
+                                    <Button></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+        
+    </DockPanel>
+</Window>
